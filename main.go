@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"spotbuzz-backend/pkg/dbhelper"
 	"spotbuzz-backend/router"
 
@@ -16,8 +15,8 @@ func main() {
 	if err != nil {
 		return
 	}
-	tab, err := dbhelper.CreateTable("Players")
-	fmt.Println(tab)
+	// tab, err := dbhelper.CreateTable("Player")    incase if you need to run locally uncommented this line
+	// fmt.Println(tab)
 	// database connection close
 	defer db.Close()
 	// create instance of gin framwork
@@ -25,6 +24,6 @@ func main() {
 	// register routes to handle router
 	router.Router(r)
 	// server running on port 8000
-	r.Run(":8000")
+	r.Run(":8080")
 
 }

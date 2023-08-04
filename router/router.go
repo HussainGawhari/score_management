@@ -17,8 +17,8 @@ func Router(r *gin.Engine) {
 	v1.POST("/player", controller.CreatePlayerScore)
 	v1.PUT("/player/:id", controller.UpdatePlayerScore)
 	v1.DELETE("player/:id", controller.DeletePlayerScore)
-	v1.GET("/player", controller.GetAllPlayerScores)
-	v1.GET("/player/rank/:val", controller.GetPlayerByRankValue)
-	v1.GET("/player/randome", controller.GetRandomePlayer)
+	v1.GET("/players", controller.GetAllPlayerScores)
+	v1.GET("/players/rank/:val", controller.GetPlayerByRankValue)
+	v1.GET("/players/randome", controller.GetRandomePlayer)
 
 }

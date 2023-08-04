@@ -1,6 +1,6 @@
 
 
-1. POST API - http://localhost:8000/v1/player
+1. POST API - http://localhost:8080/v1/player
         JSON body {
             
                 "name": "ali jan",
@@ -8,7 +8,7 @@
                 "score": 88
                  }
 
-2. PUT API - http://localhost:8000/v1/player/:7
+2. PUT API - http://localhost:8080/v1/player/:7
             JSON body {
                 {
                 "name": "Mohamad Hussain",
@@ -16,13 +16,13 @@
                 }
         
         
-3. DELETE API - http://localhost:8000/v1/player/7
+3. DELETE API - http://localhost:8080/v1/player/7
 
 {
     "message": "Player deleted successfully"
 }
 
-4. GET API - http://localhost:8000/v1/players // all players in the database are displayed in the decending order
+4. GET API - http://localhost:8080/v1/players // all players in the database are displayed in the decending order
 
     "code": 200,
     "data": [
@@ -96,7 +96,7 @@
     "message": "success"
 }
 
-5. GET API - http://localhost:8000/v1/player/rank/85
+5. GET API - http://localhost:8080/v1/players/rank/85
 
     [
         {
@@ -107,7 +107,7 @@
         }
     ]
 
-6. GET API - http://localhost:8000/v1/player/random
+6. GET API - http://localhost:8080/v1/players/random
 {
     "code": 200,
     "data": [
