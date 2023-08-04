@@ -1,0 +1,183 @@
+
+
+1. POST API - http://localhost:8000/v1/player
+        JSON body {
+            
+                "name": "ali jan",
+                "country": "US",
+                "score": 88
+                 }
+
+2. PUT API - http://localhost:8000/v1/player/:7
+            JSON body {
+                {
+                "name": "Mohamad Hussain",
+                "score": 90
+                }
+        
+        
+3. DELETE API - http://localhost:8000/v1/player/7
+
+{
+    "message": "Player deleted successfully"
+}
+
+4. GET API - http://localhost:8000/v1/players // all players in the database are displayed in the decending order
+
+    "code": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "country": "US",
+            "score": 85
+        },
+        {
+            "id": 11,
+            "name": "John Doe",
+            "country": "US",
+            "score": 10
+        },
+        {
+            "id": 9,
+            "name": "James Wang",
+            "country": "TW",
+            "score": 93
+        },
+        {
+            "id": 13,
+            "name": "Hussain jan",
+            "country": "US",
+            "score": 11
+        },
+        {
+            "id": 12,
+            "name": "Hussain",
+            "country": "US",
+            "score": 12
+        },
+        {
+            "id": 6,
+            "name": "Emma Wilson",
+            "country": "FR",
+            "score": 87
+        },
+        {
+            "id": 4,
+            "name": "Emily Brown",
+            "country": "AU",
+            "score": 95
+        },
+        {
+            "id": 3,
+            "name": "Bob Johnson",
+            "country": "UK",
+            "score": 78
+        },
+        {
+            "id": 2,
+            "name": "Alice Smith",
+            "country": "CA",
+            "score": 92
+        },
+        {
+            "id": 14,
+            "name": "ali jan",
+            "country": "US",
+            "score": 88
+        },
+        {
+            "id": 15,
+            "name": "ali jan",
+            "country": "US",
+            "score": 88
+        }
+    ],
+    "message": "success"
+}
+
+5. GET API - http://localhost:8000/v1/player/rank/85
+
+    [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "country": "US",
+            "score": 85
+        }
+    ]
+
+6. GET API - http://localhost:8000/v1/player/random
+{
+    "code": 200,
+    "data": [
+        {
+            "id": 15,
+            "name": "ali jan",
+            "country": "US",
+            "score": 88
+        },
+        {
+            "id": 11,
+            "name": "John Doe",
+            "country": "US",
+            "score": 10
+        },
+        {
+            "id": 13,
+            "name": "Hussain jan",
+            "country": "US",
+            "score": 11
+        },
+        {
+            "id": 4,
+            "name": "Emily Brown",
+            "country": "AU",
+            "score": 95
+        },
+        {
+            "id": 6,
+            "name": "Emma Wilson",
+            "country": "FR",
+            "score": 87
+        },
+        {
+            "id": 14,
+            "name": "ali jan",
+            "country": "US",
+            "score": 88
+        },
+        {
+            "id": 1,
+            "name": "John Doe",
+            "country": "US",
+            "score": 85
+        },
+        {
+            "id": 2,
+            "name": "Alice Smith",
+            "country": "CA",
+            "score": 92
+        },
+        {
+            "id": 12,
+            "name": "Hussain",
+            "country": "US",
+            "score": 12
+        },
+        {
+            "id": 9,
+            "name": "James Wang",
+            "country": "TW",
+            "score": 93
+        },
+        {
+            "id": 3,
+            "name": "Bob Johnson",
+            "country": "UK",
+            "score": 78
+        }
+    ],
+    "message": "success"
+}
+
