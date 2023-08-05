@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"spotbuzz-backend/pkg/dbhelper"
 	"spotbuzz-backend/router"
 
@@ -15,8 +16,9 @@ func main() {
 	if err != nil {
 		return
 	}
-	// tab, err := dbhelper.CreateTable("Player")    incase if you need to run locally uncommented this line
-	// fmt.Println(tab)
+	//    incase if you need to run locally uncommented this line
+	tab, err := dbhelper.CreateTable("Player")
+	fmt.Println(tab)
 	// database connection close
 	defer db.Close()
 	// create instance of gin framwork
