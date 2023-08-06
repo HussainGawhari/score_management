@@ -1,5 +1,4 @@
 package main
-
 import (
 	"fmt"
 	// "spotbuzz-backend/pkg/dbhelper"
@@ -7,11 +6,23 @@ import (
 
 	// "github.com/gin-gonic/gin"
 	// _ "github.com/lib/pq"
+	"net/http"
+   	"os"
 )
 
 func main() {
 
-	fmt.Println("This is mY player score management systemK")
+	 port := os.Getenv("PORT")
+	   if port == "" {
+	      port = "8080"
+	   }
+	
+	   http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	      fmt.Fprintln(w, "Hello, World!")
+	   })
+	
+	   http.ListenAndServe(":"+port, nil)
+	// fmt.Println("This is mY player score management systemK")
 	// DB connection
 	// db, err := dbhelper.CreateConnection()
 	// if err != nil {
